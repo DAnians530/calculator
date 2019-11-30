@@ -10,6 +10,8 @@
 
     .frame {
         position: relative;
+        display: flex;
+        flex-direction: column;
         height: 90vh;
         width: auto;
         box-sizing: content-box;
@@ -60,7 +62,7 @@
         background-color: black;
         padding: 5px;
         border-width: 2px;
-        transition: filter 0.1s ease
+        transition: filter 0.1s ease;
     }
 
     .num-child:hover, .num-child:focus {
@@ -76,22 +78,23 @@
         position: relative;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto auto; 
-        padding: 0 5px 0 5px;
-        margin-left: auto;
-        margin-right: auto;
+        padding: 5px 5px 0 5px;
+
     }
 
     .op-child {
         border-style: solid;
         color: rgb(211, 211, 211);
         font-style: bold;
+        font-size: 1.5em;
+        height: 2em;
         text-align: center;
         text-decoration: none;
         border-style: solid;
         border-color: rgb(211, 211, 211);
         background-color: black;
+        padding: 5px;
         border-width: 2px;
-        font-size: 2em;
         transition: filter 0.1s ease;
     }
 
@@ -115,9 +118,9 @@
         border-style: solid;
         border-color: rgb(211, 211, 211);
         background-color: black;
-        margin: 1em auto 10px auto;
+        margin: auto auto 10px auto;
         border-width: 2px;
-        font-size: 2.5em;
+        font-size: 3em;
         transition: filter 0.1s ease;
     }
 
