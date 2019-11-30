@@ -7,15 +7,19 @@
 </head>
 
 <style>
+
     .frame {
-        height: 100%;
-        width: 25em;
+        position: relative;
+        height: 95vh;
+        width: auto;
+        box-sizing: content-box;
         background-color:rgb(124, 0, 0);
         border-style: solid;
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
     .display {
+        position: relative;
         background-color:rgb(199, 199, 199);
         height: 4em;
         width: 80%;
@@ -30,6 +34,7 @@
 
     .numbers {
         display: grid;
+        position: relative;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto auto; 
         color: rgb(211, 211, 211);
@@ -58,9 +63,9 @@
         transition: filter 0.1s ease
     }
 
-    /* .num-child:hover, .num-child:focus {
+    .num-child:hover, .num-child:focus {
         background-color:rgb(78, 78, 78);
-    } */
+    }
 
     #point {
         font-size: 1.8em;
@@ -68,6 +73,7 @@
 
     .operators {
         display: grid;
+        position: relative;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto auto; 
         padding: 0 5px 0 5px;
@@ -94,9 +100,9 @@
         grid-column: 1 / 5;
     }
 
-    /* .op-child:hover, .op-child:focus {
+    .op-child:hover, .op-child:focus {
         background-color:rgb(78, 78, 78);
-    } */
+    }
 
     .start {
         display: block;
@@ -109,18 +115,17 @@
         border-style: solid;
         border-color: rgb(211, 211, 211);
         background-color: black;
-        padding: 2px;
         margin: 10px auto 10px auto;
         border-width: 2px;
         font-size: 3em;
         transition: filter 0.1s ease;
     }
 
-    /* .start:hover, .start:focus {
+    .start:hover, .start:focus {
         background-color:rgb(78, 78, 78);
     }
 
-    @media(hover: hover) and (pointer: fine) {
+    /* @media(hover: hover) and (pointer: fine) {
         button:hover {
             background: yellow;
         }
@@ -130,7 +135,7 @@
 
 
 <body>
-
+<div class="container">
     <div class="frame">
         <div class="display">
             <div class="display-text">
@@ -160,7 +165,7 @@
         </div>
         <button class="start">Start/Reset</button>
     </div>
-
+</div>
 
   <script>
       const start = document.querySelector(".start")
